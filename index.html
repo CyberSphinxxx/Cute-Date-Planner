@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Go on a Date!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Ask if they want to go on a date -->
+  <h1>Would you like to go on a date with me?</h1>
+  <div class="btn-container">
+    <button class="btn-yes" onclick="showDateSelection()">Yes</button>
+    <button class="btn-no" onclick="sayNo()">No</button>
+  </div>
+
+  <!-- Ask when they're free -->
+  <div class="date-selection hidden">
+    <h2>When are you free?</h2>
+    <input type="datetime-local" id="dateTimeInput" />
+    <button class="btn-yes" onclick="showLocationSelection()">Next</button>
+  </div>
+
+  <!-- Choose a location -->
+  <div class="location-selection hidden">
+    <h2>Where do you want to go?</h2>
+    <div class="locations">
+      <div class="location" onclick="selectLocation('Beach')">
+        <img src="https://placekitten.com/80/80" alt="Beach">
+        <p>Beach</p>
+      </div>
+      <div class="location" onclick="selectLocation('Cafe')">
+        <img src="https://placekitten.com/81/80" alt="Cafe">
+        <p>Cafe</p>
+      </div>
+      <div class="location" onclick="selectLocation('Park')">
+        <img src="https://placekitten.com/82/80" alt="Park">
+        <p>Park</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-section hidden">
+    <h2>See you soon!</h2>
+    <p>Date: <span id="chosenDate"></span></p>
+    <p>Location: <span id="chosenLocation"></span></p>
+    <p>Looking forward to our date! 💖</p>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

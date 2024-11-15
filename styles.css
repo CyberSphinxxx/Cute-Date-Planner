@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFE3E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  .container {
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+  }
+  h1 {
+    font-size: 2rem;
+    color: #FF6B6B;
+  }
+  .btn-container {
+    margin: 20px 0;
+  }
+  button {
+    font-size: 1.2rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn-yes {
+    background-color: #FFADAD;
+    color: white;
+  }
+  .btn-no {
+    background-color: #FF6B6B;
+    color: white;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+  .hidden {
+    display: none;
+  }
+  .date-selection, .location-selection, .summary-section {
+    margin-top: 20px;
+  }
+  select, input[type="datetime-local"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #FF6B6B;
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 80%;
+  }
+  .locations {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .location {
+    text-align: center;
+    cursor: pointer;
+  }
+  .location img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .location img:hover {
+    transform: scale(1.1);
+    border: 2px solid #FF6B6B;
+  }
+  .summary-section {
+    margin-top: 30px;
+    font-size: 1.1rem;
+  }

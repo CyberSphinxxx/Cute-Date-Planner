@@ -14,7 +14,7 @@ interface DateFormProps {
 export const DateForm = ({ onSubmit }: DateFormProps) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("romantic");
+  const [category, setCategory] = useState("none");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [location, setLocation] = useState("");
@@ -24,7 +24,7 @@ export const DateForm = ({ onSubmit }: DateFormProps) => {
     onSubmit({ title, description, category, date, time, location });
     setTitle("");
     setDescription("");
-    setCategory("romantic");
+    setCategory("none");
     setDate("");
     setTime("");
     setLocation("");
@@ -32,7 +32,9 @@ export const DateForm = ({ onSubmit }: DateFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} className="kawaii-card space-y-4">
-      <h2 className="text-2xl font-bold text-center mb-6">Add New Date Idea ✨</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">
+        Add New Date Idea ✨
+      </h2>
       
       <div>
         <input
@@ -89,10 +91,19 @@ export const DateForm = ({ onSubmit }: DateFormProps) => {
           onChange={(e) => setCategory(e.target.value)}
           className="kawaii-input w-full"
         >
+          <option value="none">None/N/A</option>
           <option value="romantic">Romantic</option>
           <option value="adventure">Adventure</option>
           <option value="casual">Casual</option>
           <option value="foodie">Foodie</option>
+          <option value="movie">Movie</option>
+          <option value="outdoor">Outdoor</option>
+          <option value="fitness">Fitness</option>
+          <option value="game">Game Night</option>
+          <option value="nature">Nature</option>
+          <option value="travel">Travel</option>
+          <option value="sports">Sports</option>
+          <option value="shopping">Shopping</option>
         </select>
       </div>
 

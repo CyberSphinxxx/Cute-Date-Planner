@@ -9,6 +9,9 @@ interface DateIdea {
   title: string;
   description: string;
   category: string;
+  date: string;
+  time: string;
+  location: string;
 }
 
 const Index = () => {
@@ -22,6 +25,11 @@ const Index = () => {
     };
     setDates([newDate, ...dates]);
     toast.success("New date idea added! 🎉");
+  };
+
+  const handleDeleteDate = (id: number) => {
+    setDates(dates.filter(date => date.id !== id));
+    toast.success("Date idea removed! 👋");
   };
 
   const filteredDates = dates.filter((date) =>
@@ -65,6 +73,10 @@ const Index = () => {
                   title={date.title}
                   description={date.description}
                   category={date.category}
+                  date={date.date}
+                  time={date.time}
+                  location={date.location}
+                  onDelete={() => handleDeleteDate(date.id)}
                 />
               ))}
             </div>

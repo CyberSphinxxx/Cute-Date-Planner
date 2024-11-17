@@ -1,15 +1,3 @@
-# Cute Date Planner
+# Cute Date Planner 💖
 
-## Project info
-
-**URL**: 
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Welcome to the Cute Date Planner! This application is designed to help you plan your perfect dates with a touch of cuteness. You can add, filter, and manage your date ideas effortlessly.

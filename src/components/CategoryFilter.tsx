@@ -9,19 +9,19 @@ export const CategoryFilter = ({
 }: CategoryFilterProps) => {
   const categories = [
     { id: "all", label: "All", emoji: "✨" },
-    { id: "none", label: "None", emoji: "🤍" },
-    { id: "romantic", label: "Romantic", emoji: "💝" },
     { id: "adventure", label: "Adventure", emoji: "🌟" },
     { id: "casual", label: "Casual", emoji: "☺️" },
-    { id: "foodie", label: "Foodie", emoji: "🍰" },
-    { id: "movie", label: "Movie", emoji: "🎬" },
-    { id: "outdoor", label: "Outdoor", emoji: "🌿" },
     { id: "fitness", label: "Fitness", emoji: "💪" },
+    { id: "foodie", label: "Foodie", emoji: "🍰" },
     { id: "game", label: "Game Night", emoji: "🎮" },
+    { id: "movie", label: "Movie", emoji: "🎬" },
     { id: "nature", label: "Nature", emoji: "🌸" },
-    { id: "travel", label: "Travel", emoji: "✈️" },
-    { id: "sports", label: "Sports", emoji: "⚽" },
+    { id: "none", label: "None", emoji: "🤍" },
+    { id: "outdoor", label: "Outdoor", emoji: "🌿" },
+    { id: "romantic", label: "Romantic", emoji: "💝" },
     { id: "shopping", label: "Shopping", emoji: "🛍️" },
+    { id: "sports", label: "Sports", emoji: "⚽" },
+    { id: "travel", label: "Travel", emoji: "✈️" },
   ];
 
   return (

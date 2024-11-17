@@ -91,19 +91,19 @@ export const DateForm = ({ onSubmit }: DateFormProps) => {
           onChange={(e) => setCategory(e.target.value)}
           className="kawaii-input w-full"
         >
-          <option value="none">None/N/A</option>
-          <option value="romantic">Romantic</option>
+          <option value="none">None</option>
           <option value="adventure">Adventure</option>
           <option value="casual">Casual</option>
-          <option value="foodie">Foodie</option>
-          <option value="movie">Movie</option>
-          <option value="outdoor">Outdoor</option>
           <option value="fitness">Fitness</option>
+          <option value="foodie">Foodie</option>
           <option value="game">Game Night</option>
+          <option value="movie">Movie</option>
           <option value="nature">Nature</option>
-          <option value="travel">Travel</option>
-          <option value="sports">Sports</option>
+          <option value="outdoor">Outdoor</option>
+          <option value="romantic">Romantic</option>
           <option value="shopping">Shopping</option>
+          <option value="sports">Sports</option>
+          <option value="travel">Travel</option>
         </select>
       </div>
 

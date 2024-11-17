@@ -19,3 +19,13 @@ The application is built using React and includes various reusable UI components
 - **Tables**: Organized views for displaying lists of date ideas.
 - **Modals and Dialogs**: For adding and managing date ideas in a user-friendly way.
 - **Toasts**: Notifications to inform users about the success or failure of their actions.
+
+## UI Components
+
+The project utilizes a set of UI components to enhance the user experience:
+
+- **Card**: A container for displaying content.
+- **Table**: For organizing data in a structured format.
+- **Dialog**: For user interactions that require confirmation or additional information.
+- **Tooltip**: Provides helpful hints or additional information on hover.
+- **Input Fields**: For capturing user input in forms.

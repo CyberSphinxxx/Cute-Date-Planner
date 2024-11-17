@@ -41,3 +41,7 @@ The project utilizes a set of UI components to enhance the user experience:
 ## Contributing
 
 We welcome contributions to the Cute Date Planner! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+
+---
+
+Thank you for checking out the Cute Date Planner! We hope you enjoy planning your cute dates! 🌸

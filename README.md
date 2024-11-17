@@ -29,3 +29,11 @@ The project utilizes a set of UI components to enhance the user experience:
 - **Dialog**: For user interactions that require confirmation or additional information.
 - **Tooltip**: Provides helpful hints or additional information on hover.
 - **Input Fields**: For capturing user input in forms.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Vite**: A fast development server and build tool.
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
+- **Radix UI**: A set of unstyled, accessible components for building high-quality design systems and web applications.

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface DateFormProps {
   onSubmit: (date: { 
@@ -9,31 +9,53 @@ interface DateFormProps {
     time: string;
     location: string;
   }) => void;
+  initialValues?: {
+    title: string;
+    description: string;
+    category: string;
+    date: string;
+    time: string;
+    location: string;
+  };
+  submitLabel?: string;
 }
 
-export const DateForm = ({ onSubmit }: DateFormProps) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("none");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [location, setLocation] = useState("");
+export const DateForm = ({ onSubmit, initialValues, submitLabel = "Add Date Idea 💝" }: DateFormProps) => {
+  const [title, setTitle] = useState(initialValues?.title || "");
+  const [description, setDescription] = useState(initialValues?.description || "");
+  const [category, setCategory] = useState(initialValues?.category || "none");
+  const [date, setDate] = useState(initialValues?.date || "");
+  const [time, setTime] = useState(initialValues?.time || "");
+  const [location, setLocation] = useState(initialValues?.location || "");
+
+  useEffect(() => {
+    if (initialValues) {
+      setTitle(initialValues.title);
+      setDescription(initialValues.description);
+      setCategory(initialValues.category);
+      setDate(initialValues.date);
+      setTime(initialValues.time);
+      setLocation(initialValues.location);
+    }
+  }, [initialValues]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit({ title, description, category, date, time, location });
-    setTitle("");
-    setDescription("");
-    setCategory("none");
-    setDate("");
-    setTime("");
-    setLocation("");
+    if (!initialValues) {
+      setTitle("");
+      setDescription("");
+      setCategory("none");
+      setDate("");
+      setTime("");
+      setLocation("");
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="kawaii-card space-y-4">
       <h2 className="text-2xl font-bold text-center mb-6">
-        Add New Date Idea ✨
+        {initialValues ? "Edit Date Idea ✏️" : "Add New Date Idea ✨"}
       </h2>
       
       <div>
@@ -111,7 +133,7 @@ export const DateForm = ({ onSubmit }: DateFormProps) => {
         type="submit"
         className="kawaii-button bg-primary text-white w-full hover:bg-primary-hover"
       >
-        Add Date Idea 💝
+        {submitLabel}
       </button>
     </form>
   );
